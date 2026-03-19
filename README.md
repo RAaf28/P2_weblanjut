@@ -1,189 +1,70 @@
-# P2 Web Lanjutan
+# Getting Started with Create React App
 
-A full-stack web application built with **React** frontend and **Express.js** backend. This project demonstrates a modern web development workflow with separate frontend and backend architectures.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## 📋 Project Structure
+## Available Scripts
 
-```
-Per2_PengembanganWeb/
-├── per2_frontend/          # React frontend application
-│   ├── src/
-│   │   ├── components/     # Reusable React components
-│   │   │   ├── BeritaList.js
-│   │   │   ├── ProductList.js
-│   │   │   └── userList.js
-│   │   ├── services/       # API service layer
-│   │   │   ├── beritaService.js
-│   │   │   ├── productService.js
-│   │   │   └── userService.js
-│   │   ├── App.js          # Main App component
-│   │   └── index.js        # React entry point
-│   └── package.json
-│
-├── src/                    # Express backend
-│   ├── controllers/        # Route controllers
-│   │   ├── beritaController.js
-│   │   ├── productController.js
-│   │   └── userController.js
-│   ├── routes/             # API route definitions
-│   │   ├── beritaRoutes.js
-│   │   ├── productRoutes.js
-│   │   └── userRoutes.js
-│   ├── models/             # Database models (if applicable)
-│   └── views/              # Server-side views (if applicable)
-│
-└── package.json            # Backend dependencies
-```
+In the project directory, you can run:
 
-## 🚀 Tech Stack
+### `npm start`
 
-**Frontend:**
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- React 19.2.4
-- React DOM
-- Axios (HTTP client)
-- React Scripts (Create React App)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-**Backend:**
+### `npm test`
 
-- Node.js
-- Express.js 5.2.1
-- CORS enabled
-- Body Parser
-- Dotenv (environment variables)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## 📦 Installation & Setup
+### `npm run build`
 
-### Prerequisites
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- Node.js (v14 or higher)
-- npm or yarn
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Backend Setup
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-1. Navigate to the project root:
+### `npm run eject`
 
-```bash
-cd "Path\to\Per2_PengembanganWeb"
-```
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-2. Install backend dependencies:
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-```bash
-npm install
-```
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-3. Create a `.env` file if needed for environment variables
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-### Frontend Setup
+## Learn More
 
-1. Navigate to the frontend directory:
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-```bash
-cd per2_frontend
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-2. Install frontend dependencies:
+### Code Splitting
 
-```bash
-npm install
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-## 🏃 Running the Application
+### Analyzing the Bundle Size
 
-### Start the Backend Server
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-From the project root:
+### Making a Progressive Web App
 
-```bash
-npm start
-# Backend will typically run on port 5000 or as configured
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Start the Frontend Application
+### Advanced Configuration
 
-From the `per2_frontend` directory:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-```bash
-npm start
-# Frontend runs on port 3001
-```
+### Deployment
 
-The frontend will automatically be available at `http://localhost:3001`
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-## 📚 API Endpoints
+### `npm run build` fails to minify
 
-The backend provides REST API endpoints for:
-
-- **Berita (News)**
-  - Routes: `GET`, `POST`, `PUT`, `DELETE` operations
-  - Controller: `beritaController.js`
-  - Routes: `beritaRoutes.js`
-
-- **Products**
-  - Routes: `GET`, `POST`, `PUT`, `DELETE` operations
-  - Controller: `productController.js`
-  - Routes: `productRoutes.js`
-
-- **Users**
-  - Routes: `GET`, `POST`, `PUT`, `DELETE` operations
-  - Controller: `userController.js`
-  - Routes: `userRoutes.js`
-
-All API calls from the frontend are handled through the service layer in `per2_frontend/src/services/`
-
-## 🔧 Configuration
-
-### CORS
-
-The backend is configured with CORS enabled to allow requests from the frontend (port 3001).
-
-### Environment Variables
-
-Create a `.env` file in the root directory for backend configuration (if needed):
-
-```
-PORT=5000
-# Add other environment variables as needed
-```
-
-## 📝 Available Scripts
-
-### Backend
-
-- `npm test` - Run tests (currently not configured)
-
-### Frontend
-
-- `npm start` - Run development server on port 3001
-- `npm build` - Create production build
-- `npm test` - Run test suite
-- `npm eject` - Eject from Create React App (not reversible)
-
-## 🎯 Features
-
-- Full CRUD operations for multiple resources (Berita, Products, Users)
-- RESTful API architecture
-- React component-based UI
-- Service layer for API abstraction
-- CORS-enabled for cross-origin requests
-
-## 👥 Author
-
-RAaf28
-
-## 📄 License
-
-ISC
-
-## 🤝 Contributing
-
-Feel free to fork this repository and submit pull requests for any improvements.
-
-## 📞 Support
-
-If you encounter any issues, please create an issue in the GitHub repository.
-
----
-
-**Repository:** [GitHub - P2_weblanjut](https://github.com/RAaf28/P2_weblanjut)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
